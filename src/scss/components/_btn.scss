@@ -1,0 +1,19 @@
+.btn {
+  width: 183px;
+  height: 44px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  background: $mainColor;
+  transition: 0.2s;
+
+  &:hover {
+    background: $mainColorHover;
+  }
+
+  &:active {
+    background: $mainColorActive;
+  }
+}
