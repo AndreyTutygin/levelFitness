@@ -1,4 +1,143 @@
 .about-us {
-  padding: 200px 0;
+  padding: 120px 0 230px;
   background: #000;
+
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__container-big {
+    position: relative;
+  }
+
+  &__section-title {
+    z-index: 2;
+
+    @include tablet {
+      justify-self: center;
+      text-align: center;
+    }
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  &__section-decore-img {
+    align-self: center;
+    justify-self: end;
+
+    @include tablet {
+      align-self: auto;
+      justify-self: center;
+      order: -1;
+    }
+  }
+
+  &__img-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -150px;
+    bottom: 0;
+    margin: 0 auto;
+    width: 1440px;
+    height: 360px;
+    background: center / cover no-repeat url("./../img/about-us__img-bg.png");
+
+    @include big-desktop {
+      top: -50px;
+      width: 1000px;
+      height: 250px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    padding: 90px 0 60px;
+  }
+}
+
+.section-title {
+  max-width: 540px;
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $mainColor;
+  }
+
+  &__title {
+    margin: 13px 0 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+
+    &_black {
+      color: #000;
+    }
+
+    @include mobile {
+      font-size: 23px;
+      line-height: 34px;
+    }
+  }
+
+  &__txt {
+    font-size: 18px;
+    line-height: 26px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+.section-decore-img {
+  position: relative;
+  z-index: 1;
+
+  &__img {
+    position: relative;
+  }
+
+  &__ellipse {
+    position: absolute;
+    right: 172px;
+    top: 22px;
+    width: 334px;
+    height: 334px;
+    background: rgb(231 73 15 / 40%);
+    filter: blur(115px);
+  }
+
+  &__geometry {
+    position: absolute;
+    right: -47px;
+    top: 140px;
+    width: 151px;
+    height: 195px;
+    background: center / cover no-repeat url("./../img/about-us__geometry-decore.png");
+
+    @include mobile {
+      top: 80px;
+      width: 123px;
+      height: 160px;
+    }
+  }
 }

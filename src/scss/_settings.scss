@@ -105,6 +105,10 @@ button {
   margin: 0 auto;
   padding: 0 $container-offset;
   max-width: $site-width;
+
+  @include mobile {
+    padding: 0 $container-offset - 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

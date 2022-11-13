@@ -1,0 +1,48 @@
+.registration {
+  position: relative;
+  padding: 200px 0;
+  text-align: center;
+  color: #000;
+
+  &__wrap {
+    margin: 0 auto;
+    max-width: 708px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+
+    @include mobile {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+
+  &__parag {
+    margin: 20px auto 0;
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 26px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__btn {
+    margin-top: 60px;
+    width: 350px;
+
+    @include mobile {
+      width: 280px;
+    }
+  }
+
+  @include mobile {
+    padding: 100px 0;
+  }
+}

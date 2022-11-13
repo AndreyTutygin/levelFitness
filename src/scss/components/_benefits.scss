@@ -1,0 +1,152 @@
+.benefits {
+  padding: 120px 0;
+
+  &__section-title {
+    @include tablet {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 54px;
+    gap: 30px;
+
+    @include mobile {
+      margin-top: 40px;
+    }
+  }
+
+  @include tablet {
+    padding: 60px 0;
+  }
+}
+
+.benefits-item {
+  max-width: 350px;
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 404px;
+    background: center / cover no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $mainColor;
+      opacity: 0.7;
+    }
+
+    &_1 {
+      background: url("./../img/benefits__img_1.png");
+    }
+
+    &_2 {
+      background: url("./../img/benefits__img_2.png");
+    }
+
+    &_3 {
+      background: url("./../img/benefits__img_3.png");
+    }
+
+    @include mobile {
+      height: 350px;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 128px;
+    background: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom: 3px solid #000;
+      border-left: 3px solid #000;
+      width: 21px;
+      height: 21px;
+    }
+
+    &_front {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 64px;
+      line-height: 77px;
+      color: $mainColor;
+    }
+
+    &_back {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "GothamPro";
+      font-weight: 900;
+      font-style: italic;
+      font-size: 135px;
+      line-height: 132px;
+      color: rgb(196 196 196 / 20%);
+    }
+  }
+
+  &__title {
+    margin: 30px 0 0;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__parag {
+    margin: 15px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  @include mobile {
+    max-width: 280px;
+  }
+}

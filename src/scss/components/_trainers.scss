@@ -1,0 +1,14 @@
+.trainers {
+  padding: 200px 0;
+  background: #000;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__section-decore-img {
+    align-self: center;
+    justify-self: end;
+  }
+}

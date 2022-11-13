@@ -9,6 +9,17 @@
   background: $mainColor;
   transition: 0.2s;
 
+  &_black {
+    border: 1px solid $mainColor;
+    color: $mainColor;
+    background: #000;
+
+    &:hover {
+      color: #fff;
+      background: $mainColor;
+    }
+  }
+
   &:hover {
     background: $mainColorHover;
   }

@@ -14,6 +14,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+
+      @include small-tablet {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
     }
 
     &__img {
@@ -28,6 +33,20 @@
       font-size: 48px;
       line-height: 68px;
       text-transform: uppercase;
+
+      @include big-desktop {
+        font-size: 35px;
+        line-height: 47px;
+      }
+
+      @include tablet {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      @include mobile {
+        margin-top: -30px;
+      }
     }
 
     &__txt {
@@ -36,6 +55,18 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
+
+      @include big-desktop {
+        margin-left: 25px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include small-tablet {
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
 
@@ -43,15 +74,52 @@
     position: absolute;
     right: 0;
     top: 136px;
+    z-index: 1;
     width: 585px;
     height: 704px;
     background: center / cover no-repeat url("./../img/hero__img-decore.png");
+
+    @include small-tablet {
+      width: 33%;
+      height: 251px;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 136px;
+  }
+}
+
+.swiper-pagination {
+  bottom: -50px;
+  display: none;
+
+  @include big-desktop {
+    display: block;
+  }
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -50px;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid #757575;
+  border-radius: 0;
+  width: 12px;
+  height: 12px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &-active {
+    border-color: $mainColor;
+    background: $mainColor;
   }
 }
 
 .btn-arrow {
   position: absolute;
-  top: 230px;
+  top: 200px;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -69,12 +137,16 @@
   }
 
   &_prev {
-    left: 0;
+    left: 30px;
     transform: rotate(180deg);
   }
 
   &_next {
-    right: 0;
+    right: 30px;
+  }
+
+  @include big-desktop {
+    display: none;
   }
 }
 
