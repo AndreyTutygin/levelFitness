@@ -1,0 +1,127 @@
+.sign-up {
+  position: relative;
+  border-radius: 0;
+  padding: 0 0 30px;
+  max-width: 540px;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__parag {
+    margin: 15px 0 0;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000;
+  }
+
+  @include mobile {
+    padding: 0 0 20px;
+  }
+}
+
+.sign-up-form {
+  margin: 30px auto 0;
+  padding: 0 15px;
+  max-width: 440px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label-txt {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+  }
+
+  &__input {
+    margin-top: 20px;
+    border: 1px solid #757575;
+    padding: 20px;
+    height: 60px;
+
+    &:focus {
+      outline: 1px solid #000;
+    }
+
+    @include mobile {
+      margin-top: 8px;
+      padding: 10px;
+      height: 40px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  line-height: 58px;
+  text-align: center;
+  background: rgba(#c4c4c4, 50%);
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+
+    @include mobile {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  @include mobile {
+    right: 10px;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    line-height: 35px;
+  }
+}
+
+.just-validate-error-field {
+  border-color: #f94343 !important;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.just-validate-error-label {
+  position: relative;
+  margin-top: 15px;
+  padding: 3px 0 0 28px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #f94343;
+
+  &::before {
+    content: "!";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #f94343;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 19px;
+    text-align: center;
+  }
+}

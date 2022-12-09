@@ -74,57 +74,29 @@
     }
   }
 
+  &__info-card {
+    @include tablet {
+      &:nth-child(odd) {
+        justify-self: end;
+      }
+
+      &:nth-child(even) {
+        justify-self: start;
+      }
+    }
+
+    @include small-tablet {
+      &:nth-child(odd) {
+        justify-self: auto;
+      }
+
+      &:nth-child(even) {
+        justify-self: auto;
+      }
+    }
+  }
+
   @include mobile {
     padding: 60px 0;
-  }
-}
-
-.programs-item {
-  padding: 30px 20px;
-  max-width: 350px;
-  background: #070707;
-
-  &__title {
-    margin: 20px 0 0;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    color: #fff;
-  }
-
-  &__parag {
-    margin: 15px 0 0;
-    font-size: 16px;
-    line-height: 24px;
-    color: #7f7f7f;
-  }
-
-  &__btn {
-    margin: 25px 0 0;
-    width: 100%;
-  }
-
-  @include tablet {
-    &:nth-child(odd) {
-      justify-self: end;
-    }
-
-    &:nth-child(even) {
-      justify-self: start;
-    }
-  }
-
-  @include small-tablet {
-    &:nth-child(odd) {
-      justify-self: auto;
-    }
-
-    &:nth-child(even) {
-      justify-self: auto;
-    }
-  }
-
-  @include mobile {
-    max-width: 280px;
   }
 }

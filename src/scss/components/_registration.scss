@@ -4,6 +4,34 @@
   text-align: center;
   color: #000;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    height: 30%;
+    background: #000;
+    transform: translateY(100%) skewY(-3deg);
+    transform-origin: left;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+    height: 30%;
+    background: #000;
+    transform: translateY(-100%) skewY(-3deg);
+    transform-origin: right;
+  }
+
   &__wrap {
     margin: 0 auto;
     max-width: 708px;

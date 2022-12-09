@@ -1,0 +1,45 @@
+.info-card {
+  padding: 30px 20px;
+  max-width: 350px;
+  background: #070707;
+  transition: 0.2s;
+
+  &__link {
+    display: block;
+    border: 1px solid transparent;
+    padding: 30px 20px;
+    transition: 0.2s;
+
+    &:hover {
+      border-color: $mainColor;
+    }
+
+    @include mobile {
+      padding: 15px 10px;
+    }
+  }
+
+  &__title {
+    margin: 20px 0 0;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+  }
+
+  &__parag {
+    margin: 15px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7f7f7f;
+  }
+
+  &__btn {
+    margin: 25px 0 0;
+    width: 100%;
+  }
+
+  @include mobile {
+    max-width: 280px;
+  }
+}

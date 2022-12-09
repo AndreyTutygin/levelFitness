@@ -13,16 +13,14 @@
     &__slide {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
 
       @include small-tablet {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
       }
     }
 
-    &__img {
-      grid-row: 1 / 3;
+    &__txt {
+      align-self: center;
     }
 
     &__title {
@@ -49,7 +47,7 @@
       }
     }
 
-    &__txt {
+    &__parag {
       margin-left: 50px;
       max-width: 445px;
       font-weight: 400;
@@ -70,6 +68,23 @@
     }
   }
 
+  &__slider-pagination {
+    bottom: -47px !important;
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__btn-arrow {
+    top: 200px;
+
+    @include tablet {
+      display: none !important;
+    }
+  }
+
   &__img-decore {
     position: absolute;
     right: 0;
@@ -86,21 +101,13 @@
   }
 
   @include small-tablet {
-    padding-top: 136px;
+    padding-top: 209px;
   }
 }
 
-.swiper-pagination {
-  bottom: -50px;
-  display: none;
-
-  @include big-desktop {
-    display: block;
-  }
-}
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: -50px;
+.slider-pagination {
+  position: absolute;
+  justify-content: center;
 }
 
 .swiper-pagination-bullet {
@@ -119,7 +126,6 @@
 
 .btn-arrow {
   position: absolute;
-  top: 200px;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -143,10 +149,6 @@
 
   &_next {
     right: 30px;
-  }
-
-  @include big-desktop {
-    display: none;
   }
 }
 

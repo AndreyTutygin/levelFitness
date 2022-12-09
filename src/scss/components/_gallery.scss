@@ -1,0 +1,35 @@
+.gallery {
+  padding: 120px 0;
+  background: #fff;
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 30px;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    max-height: 300px;
+
+    @include tablet {
+      &:nth-child(odd) {
+        justify-self: end;
+      }
+
+      &:nth-child(even) {
+        justify-self: start;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 60px 0;
+  }
+}

@@ -1,1 +1,146 @@
-.footer {}
+.footer {
+  position: relative;
+  padding: 120px 0 0;
+  background: #000;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 60px;
+  }
+
+  &__border {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid $mainColor;
+    padding-left: 60px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  }
+
+  &__txt {
+    align-self: center;
+    padding: 20px 10px;
+  }
+
+  &__map {
+    justify-self: end;
+    border: 0;
+    border-left: 1px solid $mainColor;
+    width: 500px;
+    height: 400px;
+
+    @include tablet {
+      border-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / 3;
+    padding: 40px 0;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #858585;
+  }
+
+  @include mobile {
+    padding: 60px 0 0;
+  }
+}
+
+.address {
+  font-style: normal;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 0 14px;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    fill: $mainColor;
+  }
+
+  &__span {
+    font-size: 18px;
+    line-height: 26px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__parag {
+    margin-top: 36px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #858585;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+.work-time {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 5px;
+
+  &__item {
+    margin: 0;
+    font-size: 18px;
+    line-height: 26px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-scroll-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 100;
+  background: rgba($mainColor, 90%);
+  transform: rotate(-90deg) translateX(-200%);
+  transition: 0.2s;
+
+  &__svg {
+    @include mobile {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &_active {
+    transform: rotate(-90deg) translateX(0);
+  }
+
+  @include mobile {
+    right: 15px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+  }
+}

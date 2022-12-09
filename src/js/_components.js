@@ -1,2 +1,9 @@
-// import './components/burger.js';
+import './functions/burger.js';
 import './components/slider.js';
+import './components/gallery.js';
+import './components/popup.js';
+import './components/scrollUp.js';
+import './components/headerShowHideByScroll.js';
+import './components/validateForm.js';
+import './components/animation.js';
+import './components/smothScroll.js';

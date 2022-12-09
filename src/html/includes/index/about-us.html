@@ -1,5 +1,5 @@
 <section class="about-us">
-  <div class="container about-us__container">
+  <div class="container about-us__container" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="1000">
     <div class="section-title about-us__section-title">
       <p class="section-title__subtitle">о клубе</p>
       <h2 class="section-title__title">Начни свое преображение с Level Fitness</h2>
@@ -12,13 +12,16 @@
       </p>
     </div>
     <div class="section-decore-img about-us__section-decore-img">
-      <div class="section-decore-img__ellipse"></div>
+      <div class="decore-ellipse section-decore-img__decore-ellipse"></div>
       <div class="section-decore-img__geometry"></div>
-      <img src="@img/section-decore-img_1.png" alt="Девушка качающая пресс" class="section-decore-img__img" width="445"
-        height="303">
+      <picture class="picture section-decore-img__picture">
+        <source class="picture__src" srcset="@img/section-decore-img_1.webp" type="image/webp">
+        <img class="picture__img" loading="lazy" src="@img/section-decore-img_1.png" width="445" height="303"
+          alt="Девушка делает упражнение на пресс">
+      </picture>
     </div>
   </div>
   <div class="container-big about-us__container-big">
-    <div class="about-us__img-bg"></div>
+    <div class="about-us__img-bg" data-aos="fade-in" data-aos-duration="2000"></div>
   </div>
 </section>

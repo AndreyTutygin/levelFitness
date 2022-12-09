@@ -1,6 +1,9 @@
 <header class="header">
   <div class="container header__container">
-    <img src="@img/logo.svg" alt="Лого" class="logo header__logo" width="165" height="75">
+    <picture class="logo header__logo">
+      <source class="logo__src" srcset="@img/logo.webp" type="image/webp">
+      <img class="logo__img" loading="lazy" src="@img/logo.png" width="165" height="75" alt="Лого">
+    </picture>
     <div class="header__item-wrap">
       <svg class="header__item-svg">
         <use xlink:href="img/sprite.svg#location"></use>
@@ -14,7 +17,8 @@
         </svg>
         <span class="header__item-txt header__phone-txt">+ 7 863 272-72-77</span>
       </a>
-      <button class="btn-reset btn header__btn">на тренировку</button>
+      <button class="btn-reset btn header__btn" data-modal-path="signUp" data-modal-animation="fadeInUp"
+        data-modal-speed="400">на тренировку</button>
     </div>
     <a href="#" class="header__item-wrap header__instagram">
       <svg class="header__item-svg header__instagram-svg">
@@ -24,11 +28,82 @@
     </a>
     <nav class="nav header__nav">
       <ul class="list-reset nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">Групповые программы</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Тренера</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Интерьер</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        <li class="nav__item"><a href="#programs" class="nav__link">Групповые программы</a></li>
+        <li class="nav__item"><a href="#trainers" class="nav__link">Тренера</a></li>
+        <li class="nav__item"><a href="#gallery-title" class="nav__link">Интерьер</a></li>
+        <li class="nav__item"><a href="#footer" class="nav__link">Контакты</a></li>
       </ul>
     </nav>
+    <div class="contacts-mobile header__contacts-mobile">
+      <a href="#" class="contacts-mobile__link" aria-label="Ссылка на наш номер">
+        <svg class="contacts-mobile__svg">
+          <use xlink:href="img/sprite.svg#phone"></use>
+        </svg>
+      </a>
+      <a href="#" class="contacts-mobile__link" aria-label="Ссылка на наш инстаграм">
+        <svg class="contacts-mobile__svg">
+          <use xlink:href="img/sprite.svg#instagram"></use>
+        </svg>
+      </a>
+      <a href="#" class="contacts-mobile__link" aria-label="Ссылка на нашу локацию">
+        <svg class="contacts-mobile__svg">
+          <use xlink:href="img/sprite.svg#location"></use>
+        </svg>
+      </a>
+    </div>
+    <button class="burger header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
+<nav class="nav-mobile" data-menu>
+  <button class="btn-reset btn-close nav-mobile__close" aria-label="Закрыть меню">
+    <svg class="btn-close__svg">
+      <use xlink:href="img/sprite.svg#close"></use>
+    </svg>
+  </button>
+  <ul class="list-reset nav-mobile__list">
+    <li class="nav-mobile__item">
+      <a href="#programs" class="nav-mobile__link" data-menu-item>
+        <svg class="nav-mobile__svg">
+          <use xlink:href="img/sprite.svg#users"></use>
+        </svg>
+        <span class="nav-mobile__txt">Групповые программы</span>
+      </a>
+    </li>
+    <li class="nav-mobile__item">
+      <a href="#trainers" class="nav-mobile__link" data-menu-item>
+        <svg class="nav-mobile__svg">
+          <use xlink:href="img/sprite.svg#trainers"></use>
+        </svg>
+        <span class="nav-mobile__txt">Тренера</span>
+      </a>
+    </li>
+    <li class="nav-mobile__item">
+      <a href="#gallery-title" class="nav-mobile__link" data-menu-item>
+        <svg class="nav-mobile__svg">
+          <use xlink:href="img/sprite.svg#interior"></use>
+        </svg>
+        <span class="nav-mobile__txt">Интерьер</span>
+      </a>
+    </li>
+    <li class="nav-mobile__item">
+      <a href="#footer" class="nav-mobile__link" data-menu-item>
+        <svg class="nav-mobile__svg">
+          <use xlink:href="img/sprite.svg#location"></use>
+        </svg>
+        <span class="nav-mobile__txt">Контакты</span>
+      </a>
+    </li>
+    <li class="nav-mobile__item">
+      <a href="#" class="nav-mobile__link" data-menu-item>
+        <span class="nav-mobile__txt">+7 863 272-72-77</span>
+      </a>
+    </li>
+    <li class="nav-mobile__item">
+      <a href="#" class="nav-mobile__link" data-menu-item>
+        <span class="nav-mobile__txt">г. Батайск, М. Горького, д. 84</span>
+      </a>
+    </li>
+  </ul>
+</nav>
